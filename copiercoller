@@ -1,0 +1,31 @@
+$user = new User();
+$user = setUsername("user");
+$user = setPassword("12345");
+$this->em->persist($user);
+
+$admin = new User();
+$admin = setUsername("admin");
+$admin = setPassword("45678");
+$this->em->persist($admin);
+$this->em->flush();
+
+//creation des categories
+
+$php = new Category();
+$php = setName("PHP");
+$this->em->persist($php);
+
+$cisco = new Category();
+$cisco = setName("Cisco");
+$this->em->persist($cisco);
+
+
+$java = new Category();
+$java = setName("Java");
+$this->em->persist($java);
+
+$sql = new Category();
+$sql = setName("SQL");
+$this->em->persist($sql);
+
+$this->em->flush();
